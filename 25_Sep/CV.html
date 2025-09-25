@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Hoang Thu Hang</title>
+    <link rel="stylesheet" href="CV.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="topmenu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#ontact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="profile">
+        <img src="./icon/cv.jpg" alt="Photo of Hoang Thu Hang">
+        <h1>Hoang Thu Hang</h1>
+        <p>3rd-year student – VNU International School</p>
+    </header>
+
+    <!-- VIDEO -->
+    <section class="intro-video">
+        <h2>Introduction Video</h2>
+        <video width="400" controls>
+            <source src="https://www.tiktok.com/@vnuis/video/7508614638221659410" type="video">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- MAIN CONTENT WITH ACCORDION -->
+    <section id="content">
+        <article>
+            <button class="accordion">Education</button>
+            <div class="panel" id="education">
+                <p>3rd-year student majoring in <b>Data Analytics (DA)</b>, VNU International School.</p>
+            </div>
+
+            <button class="accordion">Experience</button>
+            <div class="panel" id="experience">
+                <p>Active in university activities: academic clubs, research projects, event support.</p>
+            </div>
+
+            <button class="accordion">Certificates</button>
+            <div class="panel">
+                <p>Basic certificate in <b>Data Analytics (DA)</b>.</p>
+            </div>
+
+            <button class="accordion">Skills</button>
+            <div class="panel" id="skills">
+                <ul>
+                    <li>Data Analytics (DA)</li>
+                    <li>Business Analysis (BA)</li>
+                    <li>Presentation & teamwork</li>
+                </ul>
+            </div>
+
+            <button class="accordion"> Contact</button>
+            <div class="panel" id="contact">
+                <p>Email: <a href="mailto:hang@example.com">hang@example.com</a></p>
+                <p>Phone: +84 123-456-789</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Hoang Thu Hang - Personal CV</p>
+    </footer>
+
+    <!-- SCRIPT accordion -->
+    <script>
+        const acc = document.querySelectorAll(".accordion");
+        acc.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
