@@ -3,6 +3,14 @@ body {
     margin: 0;
     background: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+}
+
+/* BANNER */
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 /* NAV */
@@ -12,6 +20,9 @@ nav#topmenu ul {
     text-align: center;
     padding: 0;
     margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav#topmenu li {
     display: inline-block;
@@ -22,45 +33,65 @@ nav#topmenu a {
     text-decoration: none;
     font-size: 18px;
 }
+nav#topmenu a:hover {
+    color: #ffd700;
+}
 
-/* HEADER */
+/* PROFILE */
 .profile {
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
+    background: #e0f7fa;
 }
 .profile img {
     width: 150px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* VIDEO */
-.intro-video {
-    text-align: center;
-    margin: 20px;
+/* SECTIONS */
+section {
+    padding: 30px 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+section h2 {
+    color: #222;
+    margin-bottom: 15px;
 }
 
-/* ACCORDION */
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 15px;
-    width: 100%;
-    text-align: left;
+/* HIDDEN INFO */
+.hidden-info button {
+    background: #444;
+    color: #fff;
     border: none;
-    outline: none;
-    font-size: 18px;
-    transition: 0.4s;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }
-.accordion:hover {
-    background-color: #ccc;
+.hidden-info button:hover {
+    background: #222;
 }
-.panel {
-    padding: 0 15px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
+.hidden-info p {
+    margin-top: 10px;
+}
+
+/* ICONS */
+.icon-list {
+    text-align: center;
+    font-size: 30px;
+}
+.icon-list i {
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.icon-list i:hover {
+    color: #0077b5; /* LinkedIn blue */
 }
 
 /* FOOTER */

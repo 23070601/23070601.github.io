@@ -6,68 +6,118 @@
     <title>CV - Hoang Thu Hang</title>
     <link rel="stylesheet" href="CV.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- BANNER IMAGE -->
+    <div class="banner">
+        <img src="./image/banner.jpg" alt="Banner Image">
+    </div>
+
     <!-- NAVIGATION -->
     <nav id="topmenu">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#ontact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HEADER -->
-    <header class="profile">
-        <img src="./icon/cv.jpg" alt="Photo of Hoang Thu Hang">
+    <!-- HEADER / ABOUT -->
+    <header class="profile" id="about">
+        <img src="image/cv.jpg" alt="Photo of Hoang Thu Hang">
         <h1>Hoang Thu Hang</h1>
         <p>3rd-year student – VNU International School</p>
+        <p>A passionate student of <b>Data Analytics</b> and <b>Business Analysis</b>, eager to apply analytical skills to real-world problems.</p>
+
+        <!-- Hidden content -->
+        <div class="hidden-info">
+            <button onclick="toggleInfo('aboutMore')">Read more</button>
+            <p id="aboutMore" style="display:none;">
+                I am highly motivated to explore data-driven solutions and continuously improve my knowledge 
+                in analytics, visualization, and business communication. My career goal is to work in 
+                <b>data consulting</b> and contribute to innovative projects in Vietnam and globally.
+            </p>
+        </div>
     </header>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+        <p><b>Vietnam National University, International School</b> (2022 – Present)</p>
+        <ul>
+            <li>3rd-year student majoring in <b>Data Analytics</b>.</li>
+            <li>Key coursework: Statistics, Database Systems, Business Intelligence, Machine Learning.</li>
+            <li>Projects: Created dashboards, performed SQL data analysis, and applied predictive modeling.</li>
+        </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <p><b>Student Activities</b> – VNU International School</p>
+        <ul>
+            <li>Member of Academic Club: organized workshops on data analytics.</li>
+            <li>Contributed to research projects about digital transformation and business strategy.</li>
+            <li>Volunteer: supported logistics and promotions in school-wide events.</li>
+        </ul>
+
+        <!-- Hidden content -->
+        <div class="hidden-info">
+            <button onclick="toggleInfo('expMore')">Read more</button>
+            <p id="expMore" style="display:none;">
+                I also collaborated with peers on case studies that simulated real consulting projects, 
+                applying data analysis to marketing campaigns and financial forecasts. 
+                These activities improved my teamwork and leadership skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <ul>
+            <li>Data Analytics Certificate – Coursera (2023)</li>
+            <li>Excel for Business – Microsoft (2023)</li>
+            <li>Introduction to Business Analysis – Udemy (2024)</li>
+        </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><b>Technical:</b> Python, SQL, Excel, Tableau, Power BI</li>
+            <li><b>Business:</b> Business Analysis (BA), Reporting, Documentation</li>
+            <li><b>Soft skills:</b> Teamwork, Problem-solving, Presentation</li>
+            <li><b>Languages:</b> English (Intermediate), Vietnamese (Native)</li>
+        </ul>
+    </section>
+
 
     <!-- VIDEO -->
     <section class="intro-video">
         <h2>Introduction Video</h2>
-        <video width="400" controls>
-            <source src="https://www.tiktok.com/@vnuis/video/7508614638221659410" type="video">
-            Your browser does not support the video tag.
-        </video>
+         <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/43q-Xu2r3BQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </section>
 
-    <!-- MAIN CONTENT WITH ACCORDION -->
-    <section id="content">
-        <article>
-            <button class="accordion">Education</button>
-            <div class="panel" id="education">
-                <p>3rd-year student majoring in <b>Data Analytics (DA)</b>, VNU International School.</p>
-            </div>
-
-            <button class="accordion">Experience</button>
-            <div class="panel" id="experience">
-                <p>Active in university activities: academic clubs, research projects, event support.</p>
-            </div>
-
-            <button class="accordion">Certificates</button>
-            <div class="panel">
-                <p>Basic certificate in <b>Data Analytics (DA)</b>.</p>
-            </div>
-
-            <button class="accordion">Skills</button>
-            <div class="panel" id="skills">
-                <ul>
-                    <li>Data Analytics (DA)</li>
-                    <li>Business Analysis (BA)</li>
-                    <li>Presentation & teamwork</li>
-                </ul>
-            </div>
-
-            <button class="accordion"> Contact</button>
-            <div class="panel" id="contact">
-                <p>Email: <a href="mailto:hang@example.com">hang@example.com</a></p>
-                <p>Phone: +84 123-456-789</p>
-            </div>
-        </article>
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto: 23070601@vnu.edu.vn">23070601@vnu.edu.vn</a></p>
+        <p>Phone: 0368026519</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/hoangthuhang" target="_blank">linkedin.com/in/hoangthuhang</a></p>
+        <p>GitHub: <a href="https://github.com/hoangthuhang" target="_blank">github.com/hoangthuhang</a></p>
     </section>
 
     <!-- FOOTER -->
@@ -75,20 +125,16 @@
         <p>&copy; 2025 Hoang Thu Hang - Personal CV</p>
     </footer>
 
-    <!-- SCRIPT accordion -->
+    <!-- SCRIPT for hidden info -->
     <script>
-        const acc = document.querySelectorAll(".accordion");
-        acc.forEach(button => {
-            button.addEventListener("click", function() {
-                this.classList.toggle("active");
-                let panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        });
+        function toggleInfo(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === "none") {
+                el.style.display = "block";
+            } else {
+                el.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
