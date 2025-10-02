@@ -6,6 +6,13 @@ body {
     line-height: 1.6;
 }
 
+h2, h3 {
+    color: #0077b5;        /* màu chữ xanh đậm (có thể đổi theo ý) */
+    text-decoration: underline; /* gạch chân */
+    text-underline-offset: 6px; /* khoảng cách gạch chân so với chữ */
+    margin-bottom: 12px;
+}
+
 /* BANNER */
 .banner img {
     width: 100%;
@@ -102,3 +109,26 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+
+
+/* Căn giữa và responsive video */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;   /* giới hạn chiều rộng */
+    margin: 0 auto;     /* căn giữa khung */
+    padding-bottom: 56.25%; /* tỷ lệ 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* bo góc nhẹ */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
