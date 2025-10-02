@@ -6,13 +6,6 @@ body {
     line-height: 1.6;
 }
 
-h2, h3 {
-    color: #0077b5;        /* màu chữ xanh đậm (có thể đổi theo ý) */
-    text-decoration: underline; /* gạch chân */
-    text-underline-offset: 6px; /* khoảng cách gạch chân so với chữ */
-    margin-bottom: 12px;
-}
-
 /* BANNER */
 .banner img {
     width: 100%;
@@ -66,7 +59,9 @@ section {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 section h2 {
-    color: #222;
+    color: #228B22;        /* màu chữ xanh đậm (có thể đổi theo ý) */
+    text-decoration: underline; /* gạch chân */
+    text-underline-offset: 6px; /* khoảng cách gạch chân so với chữ */
     margin-bottom: 15px;
 }
 
