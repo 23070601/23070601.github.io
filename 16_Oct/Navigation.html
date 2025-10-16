@@ -50,7 +50,7 @@ color: green;
 
 .level2 {
     display: none;
-    position: absolute; 
+    position: absolute; /* tách khỏi luồng bình thường của trang và đặt tại vị trí cố định */
     padding: 0px;
     margin-top: 5px;
 }
@@ -60,7 +60,7 @@ color: green;
 } 
 .level2 li {
     float: none;
-    position: relative; 
+    position: relative; /* Trả về vị trí bình thường trong luồng tài liệu */
     display: block; 
     padding: 10px;
     height: auto;
