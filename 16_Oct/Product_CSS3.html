@@ -5,60 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Product List with CSS3</title>
   <style type="text/css">
-    /* Hide product details initially */
+
     .ProductDetails {
       display: none;
     }
+    
+    /* Product image styling */
+    .Product img {
+      width: 150px;
+      height: 150px;
+      border-radius: 20px; /* Bo góc ảnh */
+      box-shadow: 5px 5px 10px #aaa; /* Thêm bóng đổ */
+      transition: transform 0.3s ease;  /* Hiệu ứng chuyển động khi hover */
+    }
+
+      /* Product name styling */
+    .ProductName {font-weight: bold;}
+
+     /* Product price styling */
+    .ProductPrice {font-style: italic;}
+
+     /* Add dash before price */
+    .ProductPrice::before {content: " - ";}
 
     /* Product container */
     .Product {
       text-align: center;
       width: 150px;
-      margin: 0px 20px;
-      float: left;
-      cursor: pointer;
-    }
-
-    /* Product image styling */
-    .Product img {
-      width: 150px;
-      height: 150px;
-      border-radius: 20px;
-      box-shadow: 5px 5px 10px #aaa;
-      transition: transform 0.3s ease;
-    }
-
-    /* Add zoom effect on hover */
-    .Product:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Product name styling */
-    .ProductName {
-      font-weight: bold;
-      display: block;
-    }
-
-    /* Product price styling */
-    .ProductPrice {
-      font-style: italic;
-    }
-
-    /* Add dash before price */
-    .ProductPrice::before {
-      content: " - ";
+      margin: 0px 20px; /* Khoảng cách giữa các sản phẩm */
+      float: left; /* Sắp xếp sản phẩm theo hàng ngang */
+      cursor: pointer; /* Thêm con trỏ khi hover */
     }
 
     /* Show details on hover */
-    .Product:hover .ProductDetails {
-      display: block;
-    }
+    .Product:hover .ProductDetails {display: block;} /* Hiển thị chi tiết khi hover */
   </style>
 </head>
 <body>
   <div>
     <div class="Product">
-      <img src="images/rose.jpg" alt="Rose" />
+      <img src="img/rose.jpg" alt="Rose" />
       <div class="ProductDetails">
         <span class="ProductName">Rose</span>
         <span class="ProductPrice">1.5$</span>
@@ -66,7 +52,7 @@
     </div>
 
     <div class="Product">
-      <img src="images/tulip.jpg" alt="Tulip" />
+      <img src="img/tulip.jpg" alt="Tulip" />
       <div class="ProductDetails">
         <span class="ProductName">Tulip</span>
         <span class="ProductPrice">2.0$</span>
@@ -74,7 +60,7 @@
     </div>
 
     <div class="Product">
-      <img src="images/daisy.jpg" alt="Daisy" />
+      <img src="img/daisy.jpg" alt="Daisy" />
       <div class="ProductDetails">
         <span class="ProductName">Daisy</span>
         <span class="ProductPrice">1.0$</span>
