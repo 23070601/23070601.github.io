@@ -1,34 +1,16 @@
-<html>
+<!DOCTYPE html>
 <head> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-<title>ex02</title>
-</head> 
-<body> 
-    <label for="a">Enter number A</label>
-    <input type="text" id="a" name="a" required><br><br>
-    
-    <label for="a">Enter number B</label>
-    <input type="text" id="b" name="b" required><br><br>
-
-    <button onclick="sum()">Calculate</button>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-g" /> 
+<title>ex03</title>
 <script language="javascript">
-    function sum() {
-    var a = parseFloat(document.getElementById("a").value);
-    var b = parseFloat(document.getElementById("b").value);
-
-    if(a == null || a == "" || isNaN (a)) {
-        alert ("Number A is formatted incorrect ");
-        return;
-    } else if(b == null || b == "" || isNaN(b)) {
-        alert ("Number B is formatted incorrect ");
-        return;
-    } else {
-        var result = parseFloat (a) + parseFloat (b) ;
-        alert ("Result: \n" +
-            a + " + " + b + " = " + result) ;
-    } 
-    }
+var txta = prompt ("Enter any integer");
+if(txta == null || txta == "" || isNaN(txta))
+    document.write("<font color='red'>You must enter a number</font>");
+else if(txta % 2 == 0)
+    document.write("<font color='green'><b>" + txta + " is an even number</b></font>");
+else
+    document.write ("<font color='blue'><i>" + txta + " is an odd number</i></font>"); 
 </script>
-</body>
+</head> 
+<body> </body>
 </html>
