@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        form {
+            padding: 30px 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        legend {
+            color: #228B22;        /* màu chữ xanh đậm (có thể đổi theo ý) */
+            text-decoration: underline; /* gạch chân */
+            text-underline-offset: 6px; /* khoảng cách gạch chân so với chữ */
+            margin-bottom: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form id="contact-form" action=# method="POST" enctype="multipart/form-data">
+        <!--Personal Information-->
+        <legend><h2>Personal Information</h2></legend>
+
+        <label for="name">Full Name *:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="gender">Gender *:</label>
+        <select id="gender" name="gender">
+            <option value="">Select...</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="email">Email *:</label>
+        <input type="email" id="email" name="_replyto" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="+84..."><br><br>
+
+        <label for="linkedin">LinkedIn / Website:</label>
+        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/..."><br><br>
+</body>
+</html>
