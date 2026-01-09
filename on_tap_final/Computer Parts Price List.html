@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Parts Price List</title>
+
+    <style>
+        table {
+            border-collapse: collapse; /*Quyết định viền bảng gộp hay tách*/
+            width: 60%;
+            margin: 30px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 8px 16px;
+        }
+    </style>
+</head>
+<body>
+
+<table id="partsTable">
+    <tr>
+        <th>Computer Part &copy;</th>
+        <th>Price &trade;</th>
+    </tr>
+    <tr>
+        <td>CPU &bull;</td>
+        <td>$300</td>
+    </tr>
+    <tr>
+        <td>RAM &bull;</td>
+        <td>$120</td>
+    </tr>
+    <tr>
+        <td>SSD &bull;</td>
+        <td>$150</td>
+    </tr>
+    <tr>
+        <td>GPU &bull;</td>
+        <td>$500</td>
+    </tr>
+</table>
+
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+    function changeColor() {
+        // Lấy bảng theo id
+        const table = document.getElementById("partsTable");
+
+        // Đổi màu chữ của toàn bộ bảng
+        table.style.color = "red";
+    }
+</script>
+
+</body>
+</html>

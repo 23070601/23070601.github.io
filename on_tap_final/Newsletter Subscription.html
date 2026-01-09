@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Subscription</title>
+
+    <style>
+        form {
+            max-width: 400px;
+            margin: 40px auto;
+            display: grid; /* grid layout dạng lưới */
+            grid-template-columns: 1fr; /* Một cột duy nhất */
+            gap: 12px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .options label {
+            font-weight: normal;
+            display: block;
+        }
+
+        button {
+            padding: 8px;
+        }
+
+        #result {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<form onsubmit="return validateForm()">
+    <label>Full Name</label>
+    <input type="text" id="fullname">
+
+    <label>Email</label>
+    <input type="email" id="email">
+
+    <label>Subscription Type</label>
+    <div class="options">
+        <label>
+            <input type="radio" name="type" value="monthly"> Monthly
+        </label>
+        <label>
+            <input type="radio" name="type" value="yearly"> Yearly
+        </label>
+    </div>
+
+    <label>Interests</label>
+    <div class="options">
+        <label>
+            <input type="checkbox" class="interest"> Technology
+        </label>
+        <label>
+            <input type="checkbox" class="interest"> Education
+        </label>
+        <label>
+            <input type="checkbox" class="interest"> Business
+        </label>
+    </div>
+
+    <button type="submit">Subscribe</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+    function validateForm() {
+        const email = document.getElementById("email").value.trim();
+        const interests = document.querySelectorAll(".interest:checked");
+
+        // Kiểm tra email có @ và domain
+        if (!email.includes("@") || !email.includes(".")) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // Kiểm tra ít nhất 1 interest
+        if (interests.length === 0) {
+            alert("Please select at least one interest.");
+            return false;
+        }
+
+        document.getElementById("result").textContent =
+            "Subscription successful!";
+        document.getElementById("result").style.color = "green";
+
+        return false; // Ngăn reload trang
+    }
+</script>
+
+</body>
+</html>

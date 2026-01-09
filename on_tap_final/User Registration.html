@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+
+    <style>
+        /* Reset cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Form layout bằng Flexbox */
+        form {
+            width: 350px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        #strength {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <!-- Username -->
+    <label>Username</label>
+    <input type="text"
+           id="username"
+           minlength="5"
+           maxlength="15"
+           required>
+
+    <!-- Password -->
+    <label>Password</label>
+    <input type="password"
+           id="password"
+           required>
+
+    <!-- Password strength -->
+    <small id="strength">Password strength: </small>
+
+    <!-- Profile picture -->
+    <label>Profile Picture</label>
+    <input type="file"
+           accept=".jpg,.png">
+
+</form>
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const strengthText = document.getElementById("strength");
+
+    passwordInput.addEventListener("input", function () { /* lắng nghe sự kiện nhập liệu */
+        const value = passwordInput.value;
+
+        // Kiểm tra có chữ và số
+        const hasLetter = /[a-zA-Z]/.test(value);
+        const hasNumber = /[0-9]/.test(value);
+
+        if (value.length < 6) {
+            strengthText.textContent = "Password strength: Weak";
+            strengthText.style.color = "red";
+        } 
+        else if (hasLetter && hasNumber) {
+            strengthText.textContent = "Password strength: Strong";
+            strengthText.style.color = "green";
+        } 
+        else {
+            strengthText.textContent = "Password strength: Medium";
+            strengthText.style.color = "orange";
+        }
+    });
+</script>
+
+</body>
+</html>

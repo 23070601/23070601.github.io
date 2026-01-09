@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Navigation menu */
+        .navigation {
+            margin: 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* Navigation links */
+        .navigation a {
+            text-decoration: none; /* Remove underline */
+            color: #333;
+            padding: 0 5px;
+        }
+
+        /* Dots between items */
+        .dot {
+            margin: 0 5px;
+            color: #999;
+        }
+
+        /* Hidden state */
+        .hidden {
+            display: none;
+        }
+
+        button {
+            display: flex;
+            margin: 20px auto 0;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<nav id="menu" class="navigation">
+    <a href="#">Home</a>
+    <span class="dot">•</span>
+    <a href="#">Books &copy;</a>
+    <span class="dot">•</span>
+    <a href="#">Authors &trade;</a>
+    <span class="dot">•</span>
+    <a href="#">Contact</a>
+</nav>
+
+<button onclick="toggleMenu()">Toggle Menu</button>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>

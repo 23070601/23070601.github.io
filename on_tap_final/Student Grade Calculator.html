@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grade Calculator</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 30px auto;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Dòng chẵn có màu khác */
+        tr:nth-child(even) {
+            background-color: #f85e5e;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 8px 16px;
+        }
+
+        #result {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Subject &reg;</th>
+        <th>Grade &sect;</th>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td class="grade">8</td>
+    </tr>
+    <tr>
+        <td>Physics</td>
+        <td class="grade">7</td>
+    </tr>
+    <tr>
+        <td>Chemistry</td>
+        <td class="grade">9</td>
+    </tr>
+    <tr>
+        <td>English</td>
+        <td class="grade">8</td>
+    </tr>
+</table>
+
+<button onclick="calculateAverage()">Calculate Average &ge;</button>
+
+<p id="result"></p>
+
+<script>
+    function calculateAverage() {
+        // Lấy tất cả các ô điểm
+        const grades = document.querySelectorAll(".grade");
+
+        let sum = 0;
+
+        // Cộng tất cả điểm
+        grades.forEach(function (cell) {
+            sum += Number(cell.textContent);
+        });
+
+        // Tính trung bình
+        const average = sum / grades.length;
+
+        // Hiển thị kết quả
+        document.getElementById("result").textContent =
+            "Average Grade: " + average.toFixed(2);
+    }
+</script>
+
+</body>
+</html>

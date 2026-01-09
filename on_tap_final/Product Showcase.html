@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Showcase</title>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        .grid {
+            display: grid; /* grid layout dạng lưới */
+            grid-template-columns: repeat(2, 1fr); /* grid-template-columns: repeat(n, <column-size>);
+ */
+            gap: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 10px 2px rgb(17, 16, 16); /* box-shadow: h-offset v-offset mờ rộng color;*/
+            transition: transform 0.3s; /* Hiệu ứng chuyển đổi mượt mà khi hover */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* transform: translateX(10px) translateY(-5px) scale(1.2)(phóng/thu) rotate(15deg)(xoay);*/
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 8px 16px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <h3>Product &reg;</h3>
+            <p class="price">&euro;100</p>
+            <p>High quality product &rarr; best choice</p>
+        </div>
+
+        <div class="card">
+            <h3>Product A</h3>
+            <p class="price">&euro;200</p>
+            <p>Premium design &rarr; modern style</p>
+        </div>
+
+        <div class="card">
+            <h3>Product B</h3>
+            <p class="price">&euro;150</p>
+            <p>Reliable performance &rarr; durable</p>
+        </div>
+
+        <div class="card">
+            <h3>Product C</h3>
+            <p class="price">&euro;90</p>
+            <p>Affordable &rarr; popular choice</p>
+        </div>
+    </div>
+
+    <button onclick="togglePrice()">Toggle Price</button>
+</div>
+
+<script>
+    function togglePrice() {
+        const prices = document.getElementsByClassName("price");
+
+        for (let price of prices) {
+        price.classList.toggle("hidden");
+        }
+    }
+</script>
+
+</body>
+</html>
